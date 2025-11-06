@@ -32,9 +32,10 @@ app.get("/:id",redirectFromShortUrl)
 
 app.use(errorHandler)
 
-app.listen(3000,()=>{
+app.listen(prompt, '0.0.0.0' ,()=>{
     connectDB()
-    console.log("Server is running on http://localhost:3000");
+    console.log(`Server is running on port ${PORT}`);
+    console.log(`MongoDB: ${process.env.MONGO_URI ? 'Connected' : 'Not configured'}`)
 })
 
 // GET - Redirection 
