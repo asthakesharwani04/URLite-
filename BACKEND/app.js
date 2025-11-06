@@ -32,7 +32,7 @@ app.get("/:id",redirectFromShortUrl)
 
 app.use(errorHandler)
 
-app.listen(prompt, '0.0.0.0' ,()=>{
+app.listen(PORT, '0.0.0.0' ,()=>{
     connectDB()
     console.log(`Server is running on port ${PORT}`);
     console.log(`MongoDB: ${process.env.MONGO_URI ? 'Connected' : 'Not configured'}`)
