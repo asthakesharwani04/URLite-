@@ -13,6 +13,7 @@ import cookieParser from "cookie-parser"
 dotenv.config("./.env")
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 app.use(cors({
     origin: 'https://urlite-frontend.onrender.com', // your React app
